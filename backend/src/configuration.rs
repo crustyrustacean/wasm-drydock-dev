@@ -156,9 +156,7 @@ mod tests {
     #[test]
     fn find_configuration_dir_returns_none_when_no_config_exists() {
         let dir = tempdir().unwrap();
-        unsafe {
-            std::env::set_current_dir(dir.path()).unwrap();
-        }
+        std::env::set_current_dir(dir.path()).unwrap();
         let _ = find_configuration_dir();
     }
 
