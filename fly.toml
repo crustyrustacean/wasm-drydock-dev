@@ -8,6 +8,9 @@ primary_region = 'yyz'
 
 [build]
 
+[env]
+  APP_ENVIRONMENT = "production"
+
 [http_service]
   internal_port = 3001
   force_https = true
