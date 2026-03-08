@@ -16,7 +16,7 @@ COPY . .
 RUN wasm-pack build --target web --release frontend/
 
 # Compile SCSS
-RUN cargo install grass-cli && grass frontend/styles/screen.scss frontend/styles/screen.css
+RUN cargo install grass && grass frontend/styles/screen.scss frontend/styles/screen.css
 
 # Build backend with embedded assets
 RUN cargo build --release --features embed-assets -p wasm-drydock-dev-backend
