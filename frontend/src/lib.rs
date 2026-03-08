@@ -19,6 +19,7 @@ fn App() -> Html {
                 <p>{ "wasm-drydock is a single-command dev tool for fullstack Rust web applications. Scaffold a project, start the server, and stay focused on your code." }</p>
                 <nav>
                     <a href="#get-started" class="btn-primary">{ "Get Started" }</a>
+                    <a href="https://crustyrustacean.github.io/wasm-drydock" class="btn-secondary" target="_blank" rel="noreferrer">{ "Documentation" }</a>
                     <a href="https://github.com/crustyrustacean/wasm-drydock" class="btn-secondary" target="_blank" rel="noreferrer">{ "View on GitHub" }</a>
                 </nav>
             </header>
