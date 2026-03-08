@@ -10,6 +10,7 @@ primary_region = 'yyz'
 
 [env]
   APP_ENVIRONMENT = "production"
+  APP_APPLICATION__HOST = "0.0.0.0"
 
 [http_service]
   internal_port = 3001
