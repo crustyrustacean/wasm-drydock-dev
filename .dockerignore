@@ -1,0 +1,12 @@
+target/debug
+target/.rustc_info.json
+target/CACHEDIR.TAG
+frontend/pkg
+frontend/styles/screen.css
+.git
+.gitignore
+**/*.rs
+**/*.toml
+**/*.yaml
+**/*.scss
+**/*.html
