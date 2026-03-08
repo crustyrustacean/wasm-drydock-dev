@@ -1,0 +1,3 @@
+[alias]
+backend = "run -p wasm-drydock-dev-backend"
+start = "run -p wasm-drydock-dev-backend"
