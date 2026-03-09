@@ -3,10 +3,9 @@
 use crate::api;
 use crate::configuration::Settings;
 use actix_web::dev::Server;
-#[cfg(feature = "embed-assets")]
 use actix_web::web;
 use actix_web::web::Data;
-use actix_web::{App, HttpServer};
+use actix_web::{App, HttpServer, HttpResponse, Responder};
 use std::net::TcpListener;
 use tracing_actix_web::TracingLogger;
 
@@ -39,6 +38,13 @@ impl Application {
 
 pub struct ApplicationBaseUrl(pub String);
 
+/// Serve robots.txt for web crawlers.
+async fn robots_txt() -> impl Responder {
+    HttpResponse::Ok()
+        .content_type("text/plain")
+        .body("User-agent: *\nAllow: /")
+}
+
 async fn run(listener: TcpListener, base_url: String) -> Result<Server, anyhow::Error> {
     let base_url = Data::new(ApplicationBaseUrl(base_url));
 
@@ -46,6 +52,7 @@ async fn run(listener: TcpListener, base_url: String) -> Result<Server, anyhow::
         let app = App::new()
             .wrap(TracingLogger::default())
             .app_data(base_url.clone())
+            .route("/robots.txt", web::get().to(robots_txt))
             .configure(api::configure);
 
         // In release mode, wire in static asset serving

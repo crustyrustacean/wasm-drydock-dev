@@ -3,7 +3,23 @@ resolver = "3"
 members = ["backend", "frontend", "shared"]
 
 [workspace.package]
-version = "0.2.7"
+version = "0.3.0"
 edition = "2024"
+authors = ["Jeffery D. Mitchell", "<crusty.rustacean@gmail.com>"]
+description = "The landing page home for the wasm-drydock project."
+readme = "README.md"
+repository = "https://github.com/crustyrustacean/wasm-drydock-dev.git"
 license = "MIT"
-repository = ""
+publish = false
+
+[profile.release]
+lto = true         
+codegen-units = 1   
+strip = true        
+panic = "abort"     
+
+[profile.dev]
+debug = true        
+
+[profile.dev.package."*"]
+opt-level = 2
