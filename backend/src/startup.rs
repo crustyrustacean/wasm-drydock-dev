@@ -42,7 +42,7 @@ pub struct ApplicationBaseUrl(pub String);
 async fn robots_txt() -> impl Responder {
     HttpResponse::Ok()
         .content_type("text/plain")
-        .body("User-agent: *\nAllow: /")
+        .body("User-agent: *\nAllow: /\n\nSitemap: https://wasm-drydock.dev/sitemap.xml")
 }
 
 async fn run(listener: TcpListener, base_url: String) -> Result<Server, anyhow::Error> {

@@ -24,4 +24,5 @@ async fn robots_txt_returns_200_with_correct_content() {
     let body = response.text().await.expect("Failed to read response body.");
     assert!(body.contains("User-agent: *"));
     assert!(body.contains("Allow: /"));
+    assert!(body.contains("Sitemap: https://wasm-drydock.dev/sitemap.xml"));
 }

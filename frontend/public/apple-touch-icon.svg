@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="180" height="180" rx="20" fill="url(#bg-gradient)"/>
+  
+  <!-- Anchor icon -->
+  <g transform="translate(40, 20)">
+    <circle cx="50" cy="20" r="15" fill="none" stroke="#e94560" stroke-width="4"/>
+    <line x1="50" y1="35" x2="50" y2="110" stroke="#e94560" stroke-width="4"/>
+    <path d="M 20 90 Q 50 120 80 90" fill="none" stroke="#e94560" stroke-width="4"/>
+    <line x1="30" y1="65" x2="70" y2="65" stroke="#e94560" stroke-width="4"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="90" y="155" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    WASM Drydock
+  </text>
+</svg>
