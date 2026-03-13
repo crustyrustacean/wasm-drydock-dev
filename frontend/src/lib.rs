@@ -49,7 +49,7 @@ fn App() -> Html {
             </main>
             <footer>
                 <p>
-                    { "Copyright 2026 Jeffery D. Mitchell | All rights reserved. | This site built with " }
+                    { "Copyright 2026 " } <a href="https://jeff-mitchell-dev.fly.dev" target="_blank" rel="noreferrer">{ "Jeffery D. Mitchell" }</a> { " | All rights reserved. | This site built with " }
                     <code>{ "wasm-drydock" }</code>
                 </p>
                 <p>{ "Site version: " }  <Version /> </p>

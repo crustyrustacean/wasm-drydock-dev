@@ -2935,7 +2935,7 @@ dependencies = [
 
 [[package]]
 name = "wasm-drydock-dev-backend"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "actix-web",
  "anyhow",
@@ -2959,7 +2959,7 @@ dependencies = [
 
 [[package]]
 name = "wasm-drydock-dev-frontend"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "console_error_panic_hook",
  "gloo-net 0.6.0",
@@ -2974,7 +2974,7 @@ dependencies = [
 
 [[package]]
 name = "wasm-drydock-dev-shared"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "serde",
  "serde_json",

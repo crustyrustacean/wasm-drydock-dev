@@ -3,7 +3,7 @@ resolver = "3"
 members = ["backend", "frontend", "shared"]
 
 [workspace.package]
-version = "0.4.0"
+version = "0.4.1"
 edition = "2024"
 authors = ["Jeffery D. Mitchell", "<crusty.rustacean@gmail.com>"]
 description = "The landing page home for the wasm-drydock project."
